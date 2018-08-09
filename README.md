@@ -22,7 +22,7 @@ In this project you will detect lane lines in images using Python and OpenCV.  O
 
 #The Project
 ---
-## 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of some steps.
 
