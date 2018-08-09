@@ -1,6 +1,9 @@
 # **Finding Lane Lines on the Road** 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-<iframe src="test_videos_output/solidYellowLeft.mp4" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<video width="960" height="540" controls>
+  <source src="test_videos_output/solidYellowLeft.mp4" type="video/mp4">
+</video>
 
 Overview
 ---
@@ -31,6 +34,8 @@ In order to draw lines on the left and right lanes, I converted the lines from H
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-<iframe src="test_videos_output/challenge.mp4" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<video width="960" height="540" controls>
+  <source src="test_videos_output/challenge.mp4" type="video/mp4">
+</video>
 
 At present, I use the weight method to balance the offset and noise, but there will still be some slight errors. I think I can enhance the image pre-processing.
