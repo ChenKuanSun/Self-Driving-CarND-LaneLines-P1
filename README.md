@@ -11,23 +11,33 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 
 In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
+[//]: # (Image References)
 
-The Project
+[image1]: ./test_images_output/gray_image_solidYellowLeft.jpg "gray_image_solidYellowLeft"
+[image2]: ./test_images_output/blur_gray_image_solidYellowLeft.jpg "blur_gray_image_solidYellowLeft"
+[image3]: ./test_images_output/edge_image_solidYellowLeft.jpg "edge_image_solidYellowLeft"
+[image4]: ./test_images_output/masked_edge_image_solidYellowLeft.jpg "masked_edge_image_solidYellowLeft"
+[image5]: ./test_images_output/hough_image_solidYellowLeft.jpg "hough_image_solidYellowLeft"
+[image6]: ./test_images_output/solidYellowLeft.jpg "solidYellowLeft"
+
+#The Project
 ---
-Reflection
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+## 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps:
-```
-  Convert the image to grayscale.
-  
-  Gausian smoothing and apply Canny edge detection.
-  
-  Mask other areas of the image.
-  
-  Apply Hough Transform to detect lane lines.
-  
-  Draw the lane lines on the original image.
+My pipeline consisted of some steps.
+
+###  converted the images to grayscale
+  ![alt text][image1]
+###  Gausian smoothing image
+  ![alt text][image2]
+###  apply Canny edge detection.
+  ![alt text][image3]
+###  Mask other areas of the image.
+  ![alt text][image4]
+###  Apply Hough Transform to detect lane lines.
+  ![alt text][image5]
+###  Draw the lane lines on the original image.
+  ![alt text][image6]
  ```
 In order to draw lines on the left and right lanes, I converted the lines from Hoff to a slope greater than 0.4 and less than 0.8. Divide these lines into positive and negative (left and right), and find the average slope, and the average BIAS, find <code>y=mx+b</code>, find the points at the bottom and bottom of MASK, and draw them.
 
