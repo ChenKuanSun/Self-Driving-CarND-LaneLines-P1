@@ -15,33 +15,52 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/gray_image_solidYellowLeft.jpg "gray_image_solidYellowLeft"
+[image2]: ./test_images_output/blur_gray_image_solidYellowLeft.jpg "blur_gray_image_solidYellowLeft"
+[image3]: ./test_images_output/edge_image_solidYellowLeft.jpg "edge_image_solidYellowLeft"
+[image4]: ./test_images_output/masked_edge_image_solidYellowLeft.jpg "masked_edge_image_solidYellowLeft"
+[image5]: ./test_images_output/hough_image_solidYellowLeft.jpg "hough_image_solidYellowLeft"
+[image6]: ./test_images_output/solidYellowLeft.jpg "solidYellowLeft"
+
 
 ---
 
-### Reflection
+# Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+## 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+###  converted the images to grayscale
+  ![alt text][image1]
+###  Gausian smoothing image
+  ![alt text][image2]
+###  apply Canny edge detection.
+  ![alt text][image3]
+###  Mask other areas of the image.
+  ![alt text][image4]
+###  Apply Hough Transform to detect lane lines.
+  ![alt text][image5]
+###  Draw the lane lines on the original image.
+  ![alt text][image6]
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by 
+```
+In order to draw lines on the left and right lanes, 
+I converted the lines from Hoff to a slope greater than 0.4 and less than 0.8. 
+Divide these lines into positive and negative (left and right), and 
+find the average slope, and the average BIAS, find <code>y=mx+b</code>, 
+find the points at the bottom and bottom of MASK, and draw them.
+```
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
+```
+At present, I use the weight method to balance the offset and noise, but there will still be some slight errors.
+```
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+```
+ I think I can enhance the image pre-processing.
+```
