@@ -38,13 +38,14 @@ My pipeline consisted of some steps.
   ![alt text][image5]
 ###  Draw the lane lines on the original image.
   ![alt text][image6]
- ```
+```
 In order to draw lines on the left and right lanes, I converted the lines from Hoff to a slope greater than 0.4 and less than 0.8. Divide these lines into positive and negative (left and right), and find the average slope, and the average BIAS, find <code>y=mx+b</code>, find the points at the bottom and bottom of MASK, and draw them.
-
+```
 ### 2. Identify potential shortcomings with your current pipeline
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=u2hl9mk0WSQ" target="_blank"><img src="http://img.youtube.com/vi/u2hl9mk0WSQ/0.jpg" 
 alt="This My Challenge video" width="960" height="540" border="10" /></a>
 ### This My Challenge video
-
+```
 At present, I use the weight method to balance the offset and noise, but there will still be some slight errors. I think I can enhance the image pre-processing.
+```
