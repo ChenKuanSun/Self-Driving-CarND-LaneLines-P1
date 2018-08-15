@@ -2,8 +2,8 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=VehTDTVKKSM" target="_blank"><img src="http://img.youtube.com/vi/VehTDTVKKSM/0.jpg" 
-alt="This My test video" width="960" height="540" border="10" /></a>
-### This  My test video
+alt="This is My test video" width="960" height="540" border="10" /></a>
+### This is My test video
 Overview
 ---
 
